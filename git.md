@@ -2,6 +2,9 @@ git status
 git add *
 git commit -m "comment"
 
+//Git add and commit shortcut (will not add untracked files)
+git commit -a -m "your message"
+
 git add '*.txt'   	//add all text files 
 git log
 
@@ -15,9 +18,10 @@ git log
  git diff HEAD
  git diff --staged
 
-
- git reset //unstage files
- git checkout -- octocat.txt 		//not too 
+//unstage files
+ git reset 
+ git reset HEAD fild.md
+ git checkout -- octocat.txt 		//Restore file to last state of commit 
 
  //Create a branch
  git branch new_branch 		//create the new_branch
@@ -44,3 +48,21 @@ git push
 //add all (two versions)
 git add *
 git add --all
+
+//Git config
+git config --global user.name "Anthony Ngene"
+git config --global user.email ngeneanthony@gmail.com
+
+//reset last commit 
+git reset --soft HEAD^
+git reset --soft HEAD^^ //reset the last two commits
+git reset --hard HEAD^
+
+git commit -amend -m 'message'
+
+
+/*
+* 	GIT REMOTE
+*/
+
+git remote -v 
