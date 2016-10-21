@@ -8,11 +8,7 @@ git commit -a -m "your message"
 git add '*.txt'   	//add all text files 
 git log
 
-//GitHub
- git remote add origin https://github.com/try-git/try_git.github.com
- git push -u origin master
 
- git pull origin master //download or pull from github
 
  //check difference
  git diff HEAD
@@ -58,11 +54,41 @@ git reset --soft HEAD^
 git reset --soft HEAD^^ //reset the last two commits
 git reset --hard HEAD^
 
-git commit -amend -m 'message'
+git commit --amend -m 'message'
 
 
 /*
 * 	GIT REMOTE
 */
 
-git remote -v 
+git remote -v
+
+//GitHub
+ git remote add origin https://github.com/try-git/try_git.github.com
+ git push -u origin master
+
+ git pull origin master //download or pull from github
+
+//add remote
+ git remote add <name> <address>
+ //remove remote
+ git remote rm <name>
+
+/*
+	to push to remote:
+	the -u make it possible to just run 'git push' without 
+	specifying the name and branch
+*/
+ git push -u <name> <branch>
+
+ //CLONING
+git clone https://github.com/try-git/try_git.github.com
+//change the name of the cloned repo
+git clone https://github.com/try-git/try_git.github.com new-name
+
+
+//Create branch and switch
+git branch cat 
+git branch 
+git checkout cat
+
