@@ -92,3 +92,9 @@ git branch cat
 git branch 
 git checkout cat
 
+git checkout master 
+git merge cat 
+git branch -d cat 
+
+//create and checkout branch
+git checkout -b admin
